@@ -3,7 +3,7 @@
    ============================================================ */
 
 /* TODO: LINE DevelopersでLIFFアプリを発行し、LIFF IDを書き換えてください */
-const LIFF_ID = "YOUR_LIFF_ID_HERE";
+const LIFF_ID = "2010312230-PXgMb4I3";
 
 const STORAGE_KEY = "life_story_draft_v2";
 
