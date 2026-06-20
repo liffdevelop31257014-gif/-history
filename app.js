@@ -2,7 +2,7 @@
    自分史 & 自分トリセツ & スケジュール – app.js
    ============================================================ */
 
-const LIFF_ID = "YOUR_LIFF_ID_HERE";
+const LIFF_ID = "2010312230-PXgMb4I3";
 const STORAGE_KEY = "life_story_draft_v3";
 const PX_PER_MIN = 2; // 2px/分 で比例タイムライン描画
 
