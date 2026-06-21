@@ -1,5 +1,5 @@
 /* ============================================================
-   自分史 & 自分トリセツ & スケジュール – app.js
+   自分史 & 喜怒哀楽 & スケジュール – app.js
    ============================================================ */
 
 const LIFF_ID = "2010312230-PXgMb4I3";
@@ -555,7 +555,7 @@ function buildTimelineHTML(profile,cards,dateLabel){
     <div class="timeline-list">${items||`<div class="timeline-empty">まだ出来事が登録されていません</div>`}</div>`;
 }
 
-/* ---- 自分トリセツ表示 ---- */
+/* ---- 喜怒哀楽表示 ---- */
 const EMOTION_GROUPS=[
   {key:"joy",   kanji:"喜",label:"うれしい・たのしい", ids:["tq1","tq2"]},
   {key:"anger", kanji:"怒",label:"いかり・ストレス",   ids:["tq3","tq4"]},
@@ -582,7 +582,7 @@ function buildTorisetsuHTML(torisetsu){
   return`
     <div class="torisetsu-view-header">
       <div class="torisetsu-view-header-deco">${decoFlourishSVG()}</div>
-      <p class="torisetsu-view-title">自分トリセツ</p>
+      <p class="torisetsu-view-title">喜怒哀楽</p>
       <p class="torisetsu-view-sub">喜怒哀楽からよむ、わたしの感情と価値観</p>
     </div>
     ${hasAny?groupsHTML:`<div class="timeline-empty">まだ回答が入力されていません</div>`}`;
@@ -780,7 +780,7 @@ function switchSub(sub){
   document.querySelectorAll(".sub-switch-btn").forEach(btn=>{
     btn.classList.toggle("active",btn.dataset.sub===sub);
   });
-  const titles={story:"自分史を作成",torisetsu:"自分トリセツ",schedule:"スケジュール"};
+  const titles={story:"自分史",torisetsu:"喜怒哀楽",schedule:"スケジュール"};
   document.getElementById("appBarTitle").textContent=titles[sub]||"作成";
   currentSub=sub;
   if(sub==="schedule") renderScheduleUI();
